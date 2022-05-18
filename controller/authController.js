@@ -47,7 +47,7 @@ const handleLogin = async (req, res) => {
         maxAge: 24 * 60 * 60 * 1000,
       });
 
-      res.json({ accessToken, isAdmin, refreshToken });
+      res.json({ accessToken, isAdmin });
     } else {
       res.status(401).json({ Unauthorized: "Password does not match !" });
     }
